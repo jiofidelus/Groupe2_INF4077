@@ -1,0 +1,7 @@
+{
+  "name": "TPINFO4077",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
