@@ -6,12 +6,12 @@
           <ion-icon :icon="triangle" />
           <ion-label>Tab 1</ion-label>
         </ion-tab-button>
-          
-        <ion-tab-button tab="tab2" href="/tabs/tab2">
+
+        <ion-tab-button tab="tab2" href="/tabs/page">
           <ion-icon :icon="ellipse" />
-          <ion-label>Tab 2</ion-label>
+          <ion-label>API</ion-label>
         </ion-tab-button>
-        
+
         <ion-tab-button tab="tab3" href="/tabs/tab3">
           <ion-icon :icon="square" />
           <ion-label>Tab 3</ion-label>
@@ -30,8 +30,8 @@ export default {
   components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage },
   setup() {
     return {
-      ellipse, 
-      square, 
+      ellipse,
+      square,
       triangle,
     }
   }
