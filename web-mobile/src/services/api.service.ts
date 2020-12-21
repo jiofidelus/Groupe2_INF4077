@@ -7,7 +7,7 @@ const ApiService = {
   _requestInterceptor: 0,
   _401interceptor: 0,
   init(baseURL: string | undefined) {
-    axios.defaults.baseURL = 'http://localhost:8000/api';
+    axios.defaults.baseURL = 'http://192.168.8.117:8000/api';
   },
   setHeader() {
     axios.defaults.headers.common[

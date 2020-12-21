@@ -124,6 +124,7 @@ export default {
   data() {
     return {
       cameraActive: false,
+      gpsNondisponible: false,
       long: 'Searching ....',
       lat:'Searching ....',
       searching:false,
@@ -152,7 +153,7 @@ export default {
       if (navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia({ video: true })
           .then(function (stream) {
-            video.srcObject = stream;
+            (video as any)!.srcObject = stream;
 
           })
           .catch(function () {
@@ -196,8 +197,8 @@ export default {
       })
     }
   },
-  mounted() {
-    this.afficherGPS()
+  mounted(){
+    (this as any).afficherGPS()
   }
 }
 </script>
