@@ -1,8 +1,11 @@
+import 'package:compiled/application/auth/auth_cubit.dart';
+import 'package:compiled/application/exports.dart';
 import 'package:compiled/presentation/patients/patients_screen.dart';
 import 'package:compiled/presentation/statistics/chart_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -48,8 +51,7 @@ class HomeScreen extends StatelessWidget {
                 title: Text("Logout"),
                 leading: Icon(FontAwesomeIcons.powerOff),
                 onTap: () {
-                  // Update the state of the app.
-                  // ...
+                  BlocProvider.of<AuthCubit>(context).logout();
                 },
               ),
             ],
@@ -163,8 +165,20 @@ class Widget2Content extends StatelessWidget {
             HomeMenuButton(
               name: "Patients",
               icon: FontAwesomeIcons.personBooth,
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => PatientsListScreen()));
+              onTap: () {
+                print(BlocProvider.of<PatientsCubit>(context).state);
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => MultiBlocProvider(
+                          providers: [
+                            BlocProvider<PatientsCubit>.value(
+                                value: BlocProvider.of<PatientsCubit>(context)
+                                  ..allPatient()),
+                            BlocProvider.value(
+                                value: BlocProvider.of<LocationCubit>(context)
+                                  ..locationList()),
+                          ],
+                          child: PatientsListScreen(),
+                        )));
               },
             ),
             HomeMenuButton(
@@ -212,6 +226,7 @@ class HomeMenuButton extends StatelessWidget {
   final String image;
   final IconData icon;
   final void Function() onTap;
+
   const HomeMenuButton({
     Key key,
     this.name = "No name",
@@ -219,6 +234,7 @@ class HomeMenuButton extends StatelessWidget {
     this.icon,
     this.onTap,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(

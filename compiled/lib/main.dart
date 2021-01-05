@@ -1,4 +1,5 @@
 import 'package:compiled/application/exports.dart';
+import 'package:compiled/application/locations/location_cubit.dart';
 import 'package:compiled/presentation/auth/login_screen.dart';
 import 'package:compiled/presentation/home/home_screen.dart';
 import 'package:compiled/presentation/splash/splash_screen.dart';
@@ -16,28 +17,36 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'EPI',
-      theme: ThemeData(
-        primarySwatch: Colors.cyan,
-        primaryColor: Colors.cyan[900],
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+    return StartProviders(
+      child: MaterialApp(
+        title: 'EPI',
+        theme: ThemeData(
+          primarySwatch: Colors.cyan,
+          primaryColor: Colors.cyan[900],
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        builder: EasyLoading.init(),
+        home: AppStart(),
       ),
-      builder: EasyLoading.init(),
-      home: StartProviders(),
     );
   }
 }
 
 class StartProviders extends StatelessWidget {
+  final dynamic child;
+
+  const StartProviders({Key key, this.child}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
         BlocProvider<AuthCubit>(
-            create: (BuildContext context) => getIt<AuthCubit>())
+            create: (BuildContext context) => getIt<AuthCubit>()),
+
+        BlocProvider<PatientsCubit>(create: (BuildContext context) =>getIt<PatientsCubit>()),
+        BlocProvider<LocationCubit>(create: (BuildContext context) =>getIt<LocationCubit>()),
       ],
-      child: AppStart(),
+      child: child,
     );
   }
 }

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Adamawa",
+    "code": "AD"
+  },
+  {
+    "id": 1,
+    "name": "Adamawa",
+    "code": "AD"
+  },
+  {
+    "id": 2,
+    "name": "Center",
+    "code": "CE"
+  },
+  {
+    "id": 3,
+    "name": "East",
+    "code": "ES"
+  },
+  {
+    "id": 4,
+    "name": "Far North",
+    "code": "FN"
+  },
+  {
+    "id": 5,
+    "name": "Littoral",
+    "code": "LT"
+  },
+  {
+    "id": 6,
+    "name": "North",
+    "code": "NT"
+  },
+  {
+    "id": 7,
+    "name": "Northwest",
+    "code": "NW"
+  },
+  {
+    "id": 8,
+    "name": "South",
+    "code": "ST"
+  },
+  {
+    "id": 9,
+    "name": "Southwest",
+    "code": "SW"
+  },
+  {
+    "id": 10,
+    "name": "West",
+    "code": "WT"
+  }
+]
