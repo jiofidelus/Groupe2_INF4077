@@ -2,19 +2,29 @@
   <ion-page>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="tab5" href="/tabs/tab5">
+          <ion-icon :icon="'add'"></ion-icon>
+          <ion-label>Ajouter</ion-label>
+        </ion-tab-button>
+
         <ion-tab-button tab="tab1" href="/tabs/tab1">
-          <ion-icon :icon="triangle" />
-          <ion-label>Tab 1</ion-label>
+          <ion-icon :icon="'stats-chart-outline'"></ion-icon>
+          <ion-label>Statistique</ion-label>
         </ion-tab-button>
-          
+
         <ion-tab-button tab="tab2" href="/tabs/tab2">
-          <ion-icon :icon="ellipse" />
-          <ion-label>Tab 2</ion-label>
+          <ion-icon icon="home-outline" />
+          <ion-label>Home</ion-label>
         </ion-tab-button>
-        
+
         <ion-tab-button tab="tab3" href="/tabs/tab3">
-          <ion-icon :icon="square" />
-          <ion-label>Tab 3</ion-label>
+          <ion-icon icon="medkit-outline"></ion-icon>
+          <ion-label>Maladie</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab4" href="/tabs/tab4">
+          <ion-icon icon="medkit-outline"></ion-icon>
+          <ion-label>Patients</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
@@ -30,8 +40,8 @@ export default {
   components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage },
   setup() {
     return {
-      ellipse, 
-      square, 
+      ellipse,
+      square,
       triangle,
     }
   }
