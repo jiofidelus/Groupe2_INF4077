@@ -60,3 +60,28 @@
     "email": "lbarehead9@netscape.com"
   }
 ]
+
+
+
+
+var userString = readFile("user.json")
+
+" [{}]"
+
+var userList = JSON.parse(userString)
+userList: List<User> = [{}]
+
+email, password
+
+userList[0].id
+userList[0].names
+
+Interface User{
+id: int
+name: STring
+}
+
+pour i allant de 0 a longeur(tab):
+  si email === tab[i].email
+  return vrai
+faux

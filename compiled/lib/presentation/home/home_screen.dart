@@ -1,5 +1,6 @@
 import 'package:compiled/application/auth/auth_cubit.dart';
 import 'package:compiled/application/exports.dart';
+import 'package:compiled/presentation/disease/symptom_checker_screen.dart';
 import 'package:compiled/presentation/patients/patients_screen.dart';
 import 'package:compiled/presentation/statistics/chart_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -195,29 +196,40 @@ class Widget2Content extends StatelessWidget {
 class SymptomCheckerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      child: Row(
+    return Container(
+
+      child: Stack(
         children: [
-          Expanded(
-            child: new Image(
-                fit: BoxFit.fill,
-                image: new AssetImage('assets/img/login_logo.png')),
-          ),
-          Expanded(
-            child: Column(children: [
-              "Symptom checker".text.bold.xl2.make(),
-              "Based on common symptoms".text.sm.make(),
-            ]).py16(),
+
+          InkWell(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              child: Stack(
+                fit: StackFit.passthrough,
+                children: [
+
+                  Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                    "Symptom checker".text.bold.xl2.make(),
+                    "Based on common symptoms".text.sm.make(),
+                  ]).py32().px8()
+                ],
+              ),
+            ),
           )
+              .onInkTap(() {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder:(context) =>SymptomCheckerScreen())
+                );
+              })
+              .material()
+              .card
+              .make(),
+          Positioned(bottom:-6,child: IgnorePointer(child: Image(image: AssetImage("assets/img/screening.png"), height: 100,).px8())),
         ],
       ),
-    )
-        .onInkTap(() {
-          print("Cart tap");
-        })
-        .material()
-        .card
-        .make();
+    );
   }
 }
 

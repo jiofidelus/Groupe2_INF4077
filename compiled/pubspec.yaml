@@ -35,6 +35,7 @@ dependencies:
   cool_alert: ^1.0.3
   flutter_easyloading: ^2.2.2
   intl: ^0.16.1
+  flutter_sound: ^7.4.14+1
 
 
   # The following adds the Cupertino Icons font to your application.
