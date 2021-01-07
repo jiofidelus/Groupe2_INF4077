@@ -5,6 +5,7 @@ import 'patient_model.dart';
 
 abstract class IPatientFacade{
   Future<Either<Failure, List<Patient>>> getAllPatient();
+  Future<Either<Failure, Patient>> addPatient(Patient patient);
 
 
 }

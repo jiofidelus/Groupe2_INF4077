@@ -36,6 +36,11 @@ dependencies:
   flutter_easyloading: ^2.2.2
   intl: ^0.16.1
   flutter_sound: ^7.4.14+1
+  date_time_picker: ^1.1.1
+  select_form_field: "^1.1.0"
+  geolocator: ^6.1.13
+  image_picker: ^0.6.7+17
+  mapbox_search: ^2.0.1+1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -62,6 +67,14 @@ flutter:
     - assets/mocks/
 
   fonts:
+    - family: Avenir
+      fonts:
+        - asset: assets/fonts/Avenir/AvenirLTStd-Book.otf
+          style: normal
+        - asset: assets/fonts/Avenir/AvenirLTStd-Roman.otf
+          weight: 700
+        - asset: assets/fonts/Avenir/AvenirLTStd-Black.otf
+          weight: 900
     - family: WorkSansSemiBold
       fonts:
         - asset: assets/fonts/Work_Sans/WorkSans-SemiBold.ttf

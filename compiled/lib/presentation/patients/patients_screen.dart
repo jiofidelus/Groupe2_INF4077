@@ -2,12 +2,15 @@ import 'dart:io';
 
 import 'package:compiled/application/exports.dart';
 import 'package:compiled/domain/model_export.dart';
+import 'package:compiled/presentation/patients/new_patient_screen.dart';
 import 'package:compiled/presentation/patients/patient_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:velocity_x/velocity_x.dart';
+
+import '../../service-locator.dart';
 
 class PatientsListScreen extends StatelessWidget {
   @override
@@ -32,7 +35,12 @@ class PatientsListScreen extends StatelessWidget {
       }),
       floatingActionButton: FloatingActionButton(
         child: Icon(FontAwesomeIcons.plus),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => BlocProvider<GPSCubit>(
+                  create: (context) => getIt<GPSCubit>()..getLocation(),
+                  child: NewPatientScreen())));
+        },
         tooltip: "Add a new patient",
       ),
     );
@@ -52,9 +60,14 @@ class PatientTile extends StatelessWidget {
           tag: "photo${patient.id}",
           child: CircleAvatar(
             child: patient.picture.startsWith('http')
-                ? Image.network(patient.picture)
+                ? Image.network(
+                    patient.picture,
+                  )
                 : patient.picture.isNotEmpty
-                    ? Image.file(File(patient.picture))
+                    ? Image.file(
+                        File(patient.picture),
+                        fit: BoxFit.cover,
+                      )
                     : Icon(FontAwesomeIcons.user),
           ),
         ),
