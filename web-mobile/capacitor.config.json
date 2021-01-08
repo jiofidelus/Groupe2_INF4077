@@ -1,15 +1,1 @@
-{
-  "appId": "io.ionic.starter",
-  "appName": "TPINFO4077",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "dist",
-  "plugins": {
-    "SplashScreen": {
-      "launchShowDuration": 0
-    }
-  },
-  "cordova": {},
-"linuxAndroidStudioPath": "/opt/android-studio/bin/studio.sh",
-
-}
+{}
