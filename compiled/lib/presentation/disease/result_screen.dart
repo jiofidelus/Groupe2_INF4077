@@ -4,6 +4,7 @@ import 'package:velocity_x/velocity_x.dart';
 class CheckerResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: "Consultation Results".text.make(),
