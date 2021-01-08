@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'EPI',
         theme: ThemeData(
+          fontFamily: 'Avenir',
           primarySwatch: Colors.cyan,
           primaryColor: Colors.cyan[900],
           visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -42,9 +43,10 @@ class StartProviders extends StatelessWidget {
       providers: [
         BlocProvider<AuthCubit>(
             create: (BuildContext context) => getIt<AuthCubit>()),
-
-        BlocProvider<PatientsCubit>(create: (BuildContext context) =>getIt<PatientsCubit>()),
-        BlocProvider<LocationCubit>(create: (BuildContext context) =>getIt<LocationCubit>()),
+        BlocProvider<PatientsCubit>(
+            create: (BuildContext context) => getIt<PatientsCubit>()),
+        BlocProvider<LocationCubit>(
+            create: (BuildContext context) => getIt<LocationCubit>()),
       ],
       child: child,
     );

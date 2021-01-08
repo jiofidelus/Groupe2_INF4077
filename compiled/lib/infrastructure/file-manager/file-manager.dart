@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:flutter/services.dart';
 
@@ -14,9 +13,15 @@ class FileManager {
     String data = await rootBundle.loadString(path);
     List<dynamic> jsonResult = json.decode(data);
 
-
-
     cache[path] = jsonResult;
     return jsonResult;
+  }
+
+  Future<void> addToJsonMapList(Map<String, dynamic> object, String path) {
+    var temp = (cache[path] as List).reversed.toList();
+    temp.add(object);
+    cache[path] = temp.reversed.toList();
+
+    return null;
   }
 }

@@ -11,13 +11,16 @@ void startServiceLocator() {
   getIt.registerFactory(() => AuthCubit(authFacade: getIt()));
   getIt.registerFactory(() => PatientsCubit(patientFacade: getIt()));
   getIt.registerFactory(() => LocationCubit(locationFacade: getIt()));
+  getIt.registerFactory(() => GPSCubit(locationFacade: getIt()));
 
   // Facades
   getIt.registerLazySingleton<IAuthFacade>(
       () => AuthFacade(network: getIt(), cache: getIt()));
 
-  getIt.registerLazySingleton<IPatientFacade>(() => PatientFacade(fileManager: getIt()));
-  getIt.registerLazySingleton<ILocationFacade>(() => LocationFacade(fileManager: getIt()));
+  getIt.registerLazySingleton<IPatientFacade>(
+      () => PatientFacade(fileManager: getIt()));
+  getIt.registerLazySingleton<ILocationFacade>(
+      () => LocationFacade(fileManager: getIt()));
 
   // Managers
   getIt.registerLazySingleton(() => CacheManager());

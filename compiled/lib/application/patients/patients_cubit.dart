@@ -11,9 +11,15 @@ class PatientsCubit extends Cubit<PatientsState> {
   final IPatientFacade patientFacade;
   PatientsCubit({@required this.patientFacade}) : super(PatientsState());
 
-  allPatient() async{
+  allPatient() async {
     emit(state.loadingState());
     var s = await patientFacade.getAllPatient();
     emit(s.fold((l) => state.failureState(l), (r) => state.loadedState(r)));
+  }
+
+  createPatient(Patient patient) async {
+    emit(state.loadingState());
+    await patientFacade.addPatient(patient);
+    await allPatient();
   }
 }

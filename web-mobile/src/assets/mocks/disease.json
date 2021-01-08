@@ -1,0 +1,129 @@
+{
+  "name":   "COVID 19",
+  "causedBy": "Corona Virus",
+  "description": "Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.\nMost people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment.",
+  "causes": "The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces.\nYou can be infected by breathing in the virus if you are within close proximity of someone who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth.",
+  "symptomes": [
+    {
+      "name": "Coughing",
+      "points": 1,
+      "information": "",
+      "question": "Do you cough ?"
+    },
+    {
+      "name": "Fever",
+      "points": 1,
+      "information": "",
+      "question": "Do you have fever ?"
+    },
+    {
+      "name": "Shortness of breath",
+      "points": 1,
+      "information": "",
+      "question": "Do you have shortness of breath"
+    },
+    {
+      "name": "Trouble breathing",
+      "points": 1,
+      "information": "",
+      "question": "Do you have trouble or difficulties in breathing ?"
+    },
+    {
+      "name": "Fatigue",
+      "points": 2,
+      "information": "",
+      "question": "Do you fell tired ?"
+    },
+    {
+      "name": "Chills, sometimes with shaking",
+      "points": 2,
+      "information": "",
+      "question": "Do you feel cold, and shake sometimes ?"
+    },
+    {
+      "name": "Body aches",
+      "points": 2,
+      "information": "",
+      "question": "Do you fell pains on your body ?"
+    },
+    {
+      "name": "Headache",
+      "points": 1,
+      "information": "",
+      "question": "Do you have headache ?"
+    },
+    {
+      "name": "Sore throat",
+      "points": 1,
+      "information": "",
+      "question": "Do your throat fell sore ?"
+    },
+    {
+      "name": "Congestion/runny nose",
+      "points": 1,
+      "information": "",
+      "question": "Do you suffer from congestion or runny nose ?"
+    },
+    {
+      "name": "Loss of smell or taste",
+      "points": 1,
+      "information": "",
+      "question": "Do you lose smell or taste ?"
+    },
+    {
+      "name": "Nausea",
+      "points": 1,
+      "information": "",
+      "question": "Do you have nausea ?"
+    },
+    {
+      "name": "Diarrhea",
+      "points": 1,
+      "information": "",
+      "question": "Do you have diarrhea ?"
+    }
+  ],
+  "additional": [{
+    "name": "Abroad",
+    "points": 3,
+    "information": "",
+    "question": "Have you been abroad recently in these 2 weeks ?"
+  }, {
+    "name": "Contact",
+    "points": 3,
+    "information": "",
+    "question": "Have you been in contact with a confirmed Covid 19 case"
+  }],
+  "results": [
+    {
+      "start": 0,
+      "end": 3,
+      "overview": "No harm",
+      "description": "You have nothing serious",
+      "advices": ["Stay at home", "Protect your self", "Drink alot"]
+    },
+    {
+      "start": 4,
+      "end": 6,
+      "overview": "Take care",
+      "description": "Your situation, isn't seveer to be consider a dangerous",
+      "advices": ["Stay at home", "Protect your self", "Drink alot"]
+    },
+    {
+      "start": 7,
+      "end": 14,
+      "overview": "Take care carefully",
+      "description": "Your situation, isn't seveer to be consider a dangerous",
+      "advices": ["Stay at home", "Protect your self", "Drink alot"]
+    },
+    {
+      "start": 15,
+      "end": 100,
+      "overview": "You are dying",
+      "description": "Your situation, isn't seveer to be consider a dangerous",
+      "advices": ["Stay at home", "Protect your self", "Drink alot"]
+    }
+  ]
+
+
+}
