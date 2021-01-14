@@ -10,8 +10,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'cd web-mobile'
-                sh 'npm install'
-                sh 'ionic build'
+                sh 'sudo npm install'
+                sh 'sudo ionic build'
             }
         }
         stage('deploy') {
