@@ -10,6 +10,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'cd web-mobile'
+                sh 'whoami'
                 sh 'sudo npm install'
                 sh 'sudo ionic build'
             }
@@ -19,7 +20,7 @@ pipeline {
                 echo "deploy successful"
             }
         }
-       
+
     }
 
 
