@@ -9,18 +9,18 @@ pipeline {
 
     stage('start'){
         steps {
-            sh 'sudo cd /root/Groupe2_INF4077 && sudo git reset --hard && sudo git pull && cd web-mobile && sudo npm install'
+            sh 'sudo cd /var/www/Groupe2_INF4077 && sudo git reset --hard && sudo git pull && cd web-mobile && sudo npm install'
         }
     }
     stage('build') {
         steps {
-            sh 'sudo cd /root/Groupe2_INF4077/web-mobile && sudo ionic build'
+            sh 'sudo cd /var/www/Groupe2_INF4077/web-mobile && sudo ionic build'
 
         }
     }
     stage('deploy') {
         steps {
-            sh 'sudo cd /root/Groupe2_INF4077/web-mobile && sudo pm2 start covidapp'
+            sh 'sudo cd /var/www/Groupe2_INF4077/web-mobile && sudo pm2 start covidapp'
         }
     }
 }
