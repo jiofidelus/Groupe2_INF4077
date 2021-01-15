@@ -9,7 +9,7 @@ pipeline {
 
     stage('start'){
         steps {
-            sh 'cd /var/www/Groupe2_INF4077 && sudo git reset --hard && sudo git pull && cd web-mobile && sudo npm install'
+            sh 'cd /var/www/Groupe2_INF4077 && sudo git reset --hard && sudo git pull && cd web-mobile && npm install'
         }
     }
     stage('build') {
