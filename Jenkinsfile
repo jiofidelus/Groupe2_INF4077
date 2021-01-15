@@ -13,6 +13,7 @@ pipeline {
                 sh 'cd web-mobile'
                 sh 'whoami'
                 sh 'groups'
+                sh 'pwd'
                 sh 'sudo npm install'
                 sh 'sudo ionic build'
             }
