@@ -9,6 +9,7 @@ pipeline {
 
         stage('build') {
             steps {
+                sh 'pwd'
                 sh 'cd web-mobile'
                 sh 'whoami'
                 sh 'groups'
