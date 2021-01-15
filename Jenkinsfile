@@ -15,7 +15,7 @@ pipeline {
                 sh 'groups'
                 sh 'pwd'
                 sh 'cd web-mobile && sudo npm install'
-                sh 'sudo web-mobile && sudo ionic build'
+                sh 'cd web-mobile && sudo ionic build'
             }
         }
         stage('deploy') {
