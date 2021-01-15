@@ -11,8 +11,9 @@ pipeline {
             steps {
                 sh 'cd web-mobile'
                 sh 'whoami'
-                sh 'sudo npm install'
-                sh 'sudo ionic build'
+                sh 'groups'
+                sh 'npm install'
+                sh 'ionic build'
             }
         }
         stage('deploy') {
