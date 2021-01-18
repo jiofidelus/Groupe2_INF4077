@@ -10,7 +10,7 @@ pipeline {
 
         stage('build') {
             steps {
-                sh 'pwd'
+                echo "I am build"
                 sh 'whoami'
                 sh 'groups'
                 sh 'pwd'
