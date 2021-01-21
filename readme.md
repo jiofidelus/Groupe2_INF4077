@@ -1,6 +1,4 @@
 # TP INFO4077
-## Description
-
 
 # Contributors
 
@@ -33,7 +31,13 @@ EPI-CORON est dévélopper en plusieur version
 
 
 ## Capture d'ecran
-TODO: Ajouter les capture d'ecrans
+![overview](/ui/overview.png?raw=true "Inspired from dribble")
+![home page](/ui/home_and_map.png?raw=true "Home page")
+![home page](/ui/symptom_check_and_result.png?raw=true "Home page")
+#### Note : All these UI are designed by artist from dibbble
+
+
+
 
 ## Generateur d'application de surveillance
 Un generateur d'application a aussi été mis a la disposible de nos utilisateur.
@@ -72,6 +76,9 @@ Les données de votre application vont communiquer avec une base de données
 - `npm install -g mapbox-gl`
 - `npm install`
 - `ionic serve`
+
+# Architecture utilisé
+![CI/CD Architecture](/architecture/EPI-DEVOPS.jpg?raw=true "Using Jenkins")
 
 # Comment Contribuer
 
