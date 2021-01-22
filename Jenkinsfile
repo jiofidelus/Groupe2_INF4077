@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                echo "bonjour monsieur!bienvenu en master"
+                echo "bonjour utfriytu ifvgyu"
             }
         }
 
