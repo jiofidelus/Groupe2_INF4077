@@ -1,3 +1,4 @@
+/*
 import 'package:compiled/domain/facade_export.dart';
 import 'package:compiled/infrastructure/exports.dart';
 import 'package:get_it/get_it.dart';
@@ -24,8 +25,9 @@ void startServiceLocator() {
 
   // Managers
   getIt.registerLazySingleton(() => CacheManager());
-  getIt.registerLazySingleton(() => NetworkManager());
+  //getIt.registerLazySingleton(() => NetworkManager());
   getIt.registerLazySingleton(() => FileManager());
 
   // Core
 }
+*/

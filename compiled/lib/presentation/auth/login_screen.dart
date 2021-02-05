@@ -1,5 +1,7 @@
 import 'package:compiled/application/exports.dart';
+import 'package:compiled/infrastructure/exports.dart';
 import 'package:cool_alert/cool_alert.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,7 +12,8 @@ import 'style/theme.dart' as Theme;
 import 'utils/bubble_indication_painter.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({Key key}) : super(key: key);
+  final Function onLogin;
+  LoginScreen({Key key, this.onLogin}) : super(key: key);
 
   @override
   _LoginScreenState createState() => new _LoginScreenState();
@@ -45,100 +48,119 @@ class _LoginScreenState extends State<LoginScreen>
   Color left = Colors.black;
   Color right = Colors.white;
 
+  _LoginScreenState();
+
+  Map<String, dynamic> error = {};
+  Map<String, dynamic> result = {};
+
+  doLogin(String email, String password) async {
+    print("state loading");
+    EasyLoading.showSuccess('Great Success!');
+    EasyLoading.show(status: "Please wait", dismissOnTap: false);
+
+try {
+    Response response = await NetworkManager.I
+        .post("/auth/login", data: {"email": email, "password": password});
+
+    print(response.data);
+    print(response.headers);
+    print(response.request);
+    print(response.statusCode);
+
+    if (response.statusCode > 299) {
+      error = response.data;
+      EasyLoading.dismiss();
+      CoolAlert.show(
+        context: context,
+        type: CoolAlertType.error,
+        text: error["suggestion"],
+        title: error["error"],
+      );
+    } else {
+      result = response.data;
+      NetworkManager.SetToken(result["token"]);
+      EasyLoading.dismiss();
+      widget.onLogin();
+    }
+    
+    } catch (e) {
+    print(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     print("Has been rebuild");
     return new Scaffold(
       key: _scaffoldKey,
       body: Builder(builder: (context) {
-        return BlocListener<AuthCubit, AuthState>(
-          cubit: BlocProvider.of<AuthCubit>(context),
-          listener: (context, state) {
-            print("new state $state");
-            if (state.isLoading) {
-              print("state loading");
-              EasyLoading.showSuccess('Great Success!');
-              EasyLoading.show(status: "Please wait", dismissOnTap: false);
-            }
-            if (state.failed) {
-              EasyLoading.dismiss();
-              CoolAlert.show(
-                context: context,
-                type: CoolAlertType.error,
-                text: state.errorDescription,
-                title: state.errorTitle,
-              );
-            } else {
-              EasyLoading.dismiss();
-            }
+        return NotificationListener<OverscrollIndicatorNotification>(
+          onNotification: (overscroll) {
+            overscroll.disallowGlow();
+            return true;
           },
-          child: NotificationListener<OverscrollIndicatorNotification>(
-            onNotification: (overscroll) {
-              overscroll.disallowGlow();
-            },
-            child: SingleChildScrollView(
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height >= 580
-                    ? MediaQuery.of(context).size.height
-                    : 580,
-                decoration: new BoxDecoration(
-                  gradient: new LinearGradient(
-                      colors: [
-                        Theme.Colors.loginGradientStart,
-                        Theme.Colors.loginGradientEnd
+          child: SingleChildScrollView(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height >= 580
+                  ? MediaQuery.of(context).size.height
+                  : 580,
+              decoration: new BoxDecoration(
+                gradient: new LinearGradient(
+                    colors: [
+                      Theme.Colors.loginGradientStart,
+                      Theme.Colors.loginGradientEnd
+                    ],
+                    begin: const FractionalOffset(0.0, 0.0),
+                    end: const FractionalOffset(1.0, 1.0),
+                    stops: [0.0, 1.0],
+                    tileMode: TileMode.clamp),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(top: 75.0),
+                    child: new Image(
+                        width: 250.0,
+                        height: 191.0,
+                        fit: BoxFit.fill,
+                        image: new AssetImage('assets/img/login_logo.png')),
+                  ),
+                  /*  Padding(
+                        padding: EdgeInsets.only(top: 20.0),
+                        child: _buildMenuBar(context),
+                      ),*/
+                  Expanded(
+                    flex: 1,
+                    child: PageView(
+                      controller: _pageController,
+                      onPageChanged: (i) {
+                        if (i == 0) {
+                          setState(() {
+                            right = Colors.white;
+                            left = Colors.black;
+                          });
+                        } else if (i == 1) {
+                          setState(() {
+                            right = Colors.black;
+                            left = Colors.white;
+                          });
+                        }
+                      },
+                      children: <Widget>[
+                        new ConstrainedBox(
+                          constraints: const BoxConstraints.expand(),
+                          child: _buildSignIn(context, doLogin),
+                        ),
+                        /* new ConstrainedBox(
+                              constraints: const BoxConstraints.expand(),
+                              child: _buildSignUp(context),
+                            ),*/
                       ],
-                      begin: const FractionalOffset(0.0, 0.0),
-                      end: const FractionalOffset(1.0, 1.0),
-                      stops: [0.0, 1.0],
-                      tileMode: TileMode.clamp),
-                ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(top: 75.0),
-                      child: new Image(
-                          width: 250.0,
-                          height: 191.0,
-                          fit: BoxFit.fill,
-                          image: new AssetImage('assets/img/login_logo.png')),
                     ),
-                    /*  Padding(
-                          padding: EdgeInsets.only(top: 20.0),
-                          child: _buildMenuBar(context),
-                        ),*/
-                    Expanded(
-                      flex: 1,
-                      child: PageView(
-                        controller: _pageController,
-                        onPageChanged: (i) {
-                          if (i == 0) {
-                            setState(() {
-                              right = Colors.white;
-                              left = Colors.black;
-                            });
-                          } else if (i == 1) {
-                            setState(() {
-                              right = Colors.black;
-                              left = Colors.white;
-                            });
-                          }
-                        },
-                        children: <Widget>[
-                          new ConstrainedBox(
-                            constraints: const BoxConstraints.expand(),
-                            child: _buildSignIn(context),
-                          ),
-                          /* new ConstrainedBox(
-                                constraints: const BoxConstraints.expand(),
-                                child: _buildSignUp(context),
-                              ),*/
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -233,7 +255,8 @@ class _LoginScreenState extends State<LoginScreen>
     );
   }
 
-  Widget _buildSignIn(BuildContext context) {
+  Widget _buildSignIn(
+      BuildContext context, Function(String email, String password) doLogin) {
     return Container(
       padding: EdgeInsets.only(top: 23.0),
       child: Column(
@@ -363,8 +386,7 @@ class _LoginScreenState extends State<LoginScreen>
                     ),
                     onPressed: () {
                       showInSnackBar("Logged in pressed");
-                      BlocProvider.of<AuthCubit>(context).login(
-                          loginEmailController.value.text,
+                      doLogin(loginEmailController.value.text,
                           loginPasswordController.value.text);
                     }),
               ),

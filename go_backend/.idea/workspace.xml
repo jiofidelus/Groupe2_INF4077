@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="da2d73e4-e9d5-483a-a583-6d6889fb68d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../compiled/lib/presentation/disease/symptom_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/index.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/sms.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/.idea/gen.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Formulaire generateur/Formulaire.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Formulaire generateur/formulaire2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Formulaire generateur/formulaire3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Formulaire generateur/formulaire4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Formulaire generateur/progressbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Formulaire.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/devices.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/formulaire2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/formulaire3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/formulaire4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/progressbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/disease.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/region.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/results.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/sms.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/symtom.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/disease.dart.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/location.dart.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/main.dart.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pubspec.yaml.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/templates.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/domain/locations/location-model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/domain/locations/location-model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/domain/patients/patient_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/domain/patients/patient_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/infrastructure/network-manager/network-manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/infrastructure/network-manager/network-manager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/auth/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/auth/login_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/disease/disease_info_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/disease/disease_info_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/disease/result_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/disease/result_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/disease/symptom_checker_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/disease/symptom_checker_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/home/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/patients/new_patient_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/patients/new_patient_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/patients/patients_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/patients/patients_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/lib/service-locator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/service-locator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiled/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/opt/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1o0aB6giV01Bvjo5PiXEruSpIf0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/models" />
+    <property name="settings.editor.selected.configurable" value="com.intellij.profiler.configurations.ui.EditProfilerConfigurationsComponent" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/middleware" />
+      <recent name="$PROJECT_DIR$/controller" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build backend" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_backend" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="backend" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build backend" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="595" y="124" width="400" height="677" key="#GOPATH" timestamp="1612425881024">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="595" y="124" width="400" height="677" key="#GOPATH/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612425881024" />
+    <state x="595" y="299" width="400" height="327" key="#Go_Modules" timestamp="1612426397057">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="595" y="299" width="400" height="327" key="#Go_Modules/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612426397057" />
+    <state x="608" y="181" width="374" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1612436504265">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="608" y="181" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612436504265" />
+    <state width="1378" height="186" key="GridCell.Tab.0.bottom" timestamp="1612503538020">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1554" height="224" key="GridCell.Tab.0.bottom/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
+    <state width="1378" height="186" key="GridCell.Tab.0.bottom/0.27.1600.873@0.27.1600.873" timestamp="1612503538020" />
+    <state width="1378" height="186" key="GridCell.Tab.0.center" timestamp="1612503538019">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1554" height="224" key="GridCell.Tab.0.center/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
+    <state width="1378" height="186" key="GridCell.Tab.0.center/0.27.1600.873@0.27.1600.873" timestamp="1612503538019" />
+    <state width="1378" height="186" key="GridCell.Tab.0.left" timestamp="1612503538019">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1554" height="224" key="GridCell.Tab.0.left/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
+    <state width="1378" height="186" key="GridCell.Tab.0.left/0.27.1600.873@0.27.1600.873" timestamp="1612503538019" />
+    <state width="1378" height="186" key="GridCell.Tab.0.right" timestamp="1612503538020">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1554" height="224" key="GridCell.Tab.0.right/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
+    <state width="1378" height="186" key="GridCell.Tab.0.right/0.27.1600.873@0.27.1600.873" timestamp="1612503538020" />
+    <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1612431274831">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="263" height="500" key="HiddenNamespacesPopup/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612431274831" />
+    <state x="289" y="97" key="SettingsEditor" timestamp="1612426519962">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="289" y="97" key="SettingsEditor/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612426519962" />
+  </component>
+</project>
