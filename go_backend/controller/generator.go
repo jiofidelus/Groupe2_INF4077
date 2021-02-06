@@ -149,6 +149,7 @@ func executeCommand(command string, directory string) error {
 	cmd.Stdout = cmdOutput
 
 	if err := cmd.Run(); err != nil {
+		fmt.Print(string(cmdOutput.Bytes()))
 		return err
 	}
 
