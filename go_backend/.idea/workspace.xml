@@ -1,53 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2d73e4-e9d5-483a-a583-6d6889fb68d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../compiled/lib/presentation/disease/symptom_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/index.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/sms.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/.idea/gen.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Formulaire generateur/Formulaire.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Formulaire generateur/formulaire2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Formulaire generateur/formulaire3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Formulaire generateur/formulaire4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Formulaire generateur/progressbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Formulaire.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/bg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/devices.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/formulaire2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/formulaire3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/formulaire4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/progressbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/disease.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/region.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/results.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/sms.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/symtom.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/disease.dart.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/location.dart.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main.dart.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pubspec.yaml.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/templates.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/lib/domain/locations/location-model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/domain/locations/location-model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/lib/domain/patients/patient_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/domain/patients/patient_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/lib/infrastructure/network-manager/network-manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/infrastructure/network-manager/network-manager.dart" afterDir="false" />
+    <list default="true" id="da2d73e4-e9d5-483a-a583-6d6889fb68d9" name="Default Changelist" comment="updated project and added git ignore">
       <change beforePath="$PROJECT_DIR$/../compiled/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/auth/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/auth/login_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/disease/disease_info_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/disease/disease_info_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/disease/result_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/disease/result_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/disease/symptom_checker_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/disease/symptom_checker_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/patients/new_patient_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/patients/new_patient_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/lib/presentation/patients/patients_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/presentation/patients/patients_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/lib/service-locator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/lib/service-locator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compiled/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../compiled/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/generator.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/generator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databse.BD" beforeDir="false" afterPath="$PROJECT_DIR$/databse.BD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +53,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
@@ -118,6 +98,22 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated project and added git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated project and added git ignore" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
@@ -134,26 +130,38 @@
       <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state x="608" y="181" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612436504265" />
-    <state width="1378" height="186" key="GridCell.Tab.0.bottom" timestamp="1612503538020">
-      <screen x="0" y="27" width="1600" height="873" />
+    <state x="479" y="175" width="802" height="557" key="CommitChangelistDialog2" timestamp="1612543097675">
+      <screen x="0" y="350" width="1600" height="550" />
+    </state>
+    <state x="479" y="175" width="802" height="557" key="CommitChangelistDialog2/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543097675" />
+    <state width="1558" height="384" key="GridCell.Tab.0.bottom" timestamp="1612610259661">
+      <screen x="0" y="350" width="2966" height="741" />
     </state>
     <state width="1554" height="224" key="GridCell.Tab.0.bottom/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
     <state width="1378" height="186" key="GridCell.Tab.0.bottom/0.27.1600.873@0.27.1600.873" timestamp="1612503538020" />
-    <state width="1378" height="186" key="GridCell.Tab.0.center" timestamp="1612503538019">
-      <screen x="0" y="27" width="1600" height="873" />
+    <state width="1558" height="384" key="GridCell.Tab.0.bottom/0.350.2966.741@0.350.2966.741" timestamp="1612610259661" />
+    <state width="1558" height="193" key="GridCell.Tab.0.bottom/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662131" />
+    <state width="1558" height="384" key="GridCell.Tab.0.center" timestamp="1612610259661">
+      <screen x="0" y="350" width="2966" height="741" />
     </state>
     <state width="1554" height="224" key="GridCell.Tab.0.center/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
     <state width="1378" height="186" key="GridCell.Tab.0.center/0.27.1600.873@0.27.1600.873" timestamp="1612503538019" />
-    <state width="1378" height="186" key="GridCell.Tab.0.left" timestamp="1612503538019">
-      <screen x="0" y="27" width="1600" height="873" />
+    <state width="1558" height="384" key="GridCell.Tab.0.center/0.350.2966.741@0.350.2966.741" timestamp="1612610259661" />
+    <state width="1558" height="193" key="GridCell.Tab.0.center/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662130" />
+    <state width="1558" height="384" key="GridCell.Tab.0.left" timestamp="1612610259660">
+      <screen x="0" y="350" width="2966" height="741" />
     </state>
     <state width="1554" height="224" key="GridCell.Tab.0.left/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
     <state width="1378" height="186" key="GridCell.Tab.0.left/0.27.1600.873@0.27.1600.873" timestamp="1612503538019" />
-    <state width="1378" height="186" key="GridCell.Tab.0.right" timestamp="1612503538020">
-      <screen x="0" y="27" width="1600" height="873" />
+    <state width="1558" height="384" key="GridCell.Tab.0.left/0.350.2966.741@0.350.2966.741" timestamp="1612610259660" />
+    <state width="1558" height="193" key="GridCell.Tab.0.left/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662130" />
+    <state width="1558" height="384" key="GridCell.Tab.0.right" timestamp="1612610259661">
+      <screen x="0" y="350" width="2966" height="741" />
     </state>
     <state width="1554" height="224" key="GridCell.Tab.0.right/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
     <state width="1378" height="186" key="GridCell.Tab.0.right/0.27.1600.873@0.27.1600.873" timestamp="1612503538020" />
+    <state width="1558" height="384" key="GridCell.Tab.0.right/0.350.2966.741@0.350.2966.741" timestamp="1612610259661" />
+    <state width="1558" height="193" key="GridCell.Tab.0.right/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662130" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1612431274831">
       <screen x="0" y="27" width="1600" height="873" />
     </state>

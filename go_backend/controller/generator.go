@@ -7,12 +7,15 @@ import (
 	. "backend/models"
 	"backend/templates"
 	"bytes"
+	"errors"
 	"fmt"
 	"github.com/kataras/iris/v12"
+	"gorm.io/gorm"
 	"log"
 	"net/http"
 	"os"
 	"os/exec"
+	"strings"
 	"text/template"
 )
 
@@ -34,17 +37,22 @@ func generateApp(ctx iris.Context) {
 		log.Fatal(err)
 	}
 
-	mainf, err := os.Create("lib/main.dart")
+	mainf, err := os.Create("../compiled/lib/main.dart")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	locf, err := os.Create("lib/domain/locations/location-model.dart")
+	homef, err := os.Create("../compiled/lib/presentation/home/home_screen.dart")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	disf, err := os.Create("lib/domain/disease/disease-model.dart")
+	locf, err := os.Create("../compiled/lib/domain/locations/location-model.dart")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	disf, err := os.Create("../compiled/lib/domain/disease/disease-model.dart")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -68,7 +76,46 @@ func generateApp(ctx iris.Context) {
 		return
 	}
 
-	//Creating the application in the database
+	//Verifying id does not exist
+	var existInstance Application
+	exist := configs.DB.Where(&Application{ID: data.App.ID}).First(&existInstance)
+	if exist.Error != nil && errors.Is(exist.Error, gorm.ErrRecordNotFound) {
+
+	} else {
+		ctx.StopWithJSON(http.StatusBadRequest, ErrorModel{Error: "App with id already exist", Suggestion: "Try changing the app id"})
+		return
+	}
+
+	//Template binding
+	yamlTmp := template.Must(template.New("pubspec.yaml").Parse(templates.Yaml))
+	mainTmp := template.Must(template.New("main.dart").Parse(templates.MainApp))
+	homeTmp := template.Must(template.New("home_screen.dart").Parse(templates.Home))
+	disTmp := template.Must(template.New("disease.dart").Parse(templates.Disease))
+	locTmp := template.Must(template.New("location.dart").Parse(templates.Regions))
+
+	_ = yamlTmp.Execute(yamlf, data)
+	_ = mainTmp.Execute(mainf, data)
+	_ = homeTmp.Execute(homef, data)
+	_ = disTmp.Execute(disf, data)
+	_ = locTmp.Execute(locf, data)
+
+	_ = disf.Close()
+	_ = mainf.Close()
+	_ = locf.Close()
+	_ = yamlf.Close()
+	_ = homef.Close()
+
+	log.Println("Entering application to generate")
+	_ = executeCommand("ls", "../compiled")
+	if err := executeCommand("flutter build apk --split-per-abi", "../compiled"); err != nil {
+		ctx.StopWithJSON(http.StatusInternalServerError, ErrorModel{
+			Error:      err.Error(),
+			Suggestion: "No idea",
+		})
+		return
+	}
+
+	// Storing the app in the database
 	result := configs.DB.Create(&(data.App))
 
 	if result.Error != nil {
@@ -79,37 +126,32 @@ func generateApp(ctx iris.Context) {
 		return
 	}
 
-	//Template binding
-	yamlTmp := template.Must(template.New("pubspec.yaml").Parse(templates.Yaml))
-	mainTmp := template.Must(template.New("main.dart").Parse(templates.MainApp))
-	disTmp := template.Must(template.New("disease.dart").Parse(templates.Disease))
-	locTmp := template.Must(template.New("location.dart").Parse(templates.Regions))
-
-	yamlTmp.Execute(yamlf, data)
-	mainTmp.Execute(mainf, data)
-	disTmp.Execute(disf, data)
-	locTmp.Execute(locf, data)
-
-	disf.Close()
-	mainf.Close()
-	locf.Close()
-	yamlf.Close()
-
-	log.Println("Running flutter build")
-	cmd2 := exec.Command("flutter", "build", "apk", "--split-per-abi")
-	cmdOutput := &bytes.Buffer{}
-	cmd2.Stdout = cmdOutput
-	err2 := cmd2.Run()
-	if err2 != nil {
-		ctx.StopWithJSON(http.StatusInternalServerError, ErrorModel{
-			Error:      err2.Error(),
-			Suggestion: "No idea",
-		})
-		return
-	}
-	fmt.Print(string(cmdOutput.Bytes()))
 	ctx.StatusCode(http.StatusCreated)
-	ctx.SendFile("build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk", data.App.ID+"v"+data.App.Version+".apk")
+	err = ctx.SendFile("../compiled/build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk", data.App.ID+"v"+data.App.Version+".apk")
+	if err != nil {
+		ctx.StopWithJSON(http.StatusInternalServerError, ErrorModel{
+			Error:      err.Error(),
+			Suggestion: "Could not return your application for some reasons",
+		})
+	}
 	ctx.StopExecution()
 
+}
+
+func executeCommand(command string, directory string) error {
+	commands := strings.Split(strings.TrimSpace(command), " ")
+	log.Println("Executing : " + command)
+	cmd := exec.Command(commands[0], commands[1:]...)
+
+	cmd.Dir = string(directory)
+
+	cmdOutput := &bytes.Buffer{}
+	cmd.Stdout = cmdOutput
+
+	if err := cmd.Run(); err != nil {
+		return err
+	}
+
+	fmt.Print(string(cmdOutput.Bytes()))
+	return nil
 }

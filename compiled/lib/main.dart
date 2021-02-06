@@ -41,8 +41,8 @@ class MyApp extends StatelessWidget {
         title: 'My App',
         theme: ThemeData(
           fontFamily: 'Avenir',
-          primaryColor: HexColor.fromHex("#777788"),
-          accentColor: HexColor.fromHex("#cc1199"),
+          primaryColor: HexColor.fromHex(""),
+          accentColor: HexColor.fromHex(""),
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         builder: EasyLoading.init(),
