@@ -146,10 +146,13 @@ func executeCommand(command string, directory string) error {
 	cmd.Dir = string(directory)
 
 	cmdOutput := &bytes.Buffer{}
+	cmdError := &bytes.Buffer{}
 	cmd.Stdout = cmdOutput
+	cmd.Stderr = cmdError
 
 	if err := cmd.Run(); err != nil {
 		fmt.Print(string(cmdOutput.Bytes()))
+		fmt.Print(string(cmdError.Bytes()))
 		return err
 	}
 
