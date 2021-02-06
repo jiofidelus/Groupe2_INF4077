@@ -26,7 +26,27 @@ func init() {
 	booksAPI.Use(middleware.Logger())
 
 	booksAPI.Post("/", generateApp)
+	booksAPI.Get("/download", serveApp)
 
+}
+
+func serveApp(ctx iris.Context) {
+	if !fileExist("../compiled/build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk") {
+		ctx.StopWithJSON(http.StatusBadRequest, ErrorModel{
+			Error:      "No application found",
+			Suggestion: "Please generate an application before downloading",
+		})
+		return
+	}
+
+	err := ctx.SendFile("../compiled/build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk", ctx.URLParamDefault("name", "groupe2.apk"))
+	if err != nil {
+		ctx.StopWithJSON(http.StatusInternalServerError, ErrorModel{
+			Error:      err.Error(),
+			Suggestion: "Could not return your application for some reasons",
+		})
+	}
+	ctx.StopExecution()
 }
 
 func generateApp(ctx iris.Context) {
@@ -126,15 +146,7 @@ func generateApp(ctx iris.Context) {
 		return
 	}
 
-	ctx.StatusCode(http.StatusCreated)
-	err = ctx.SendFile("../compiled/build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk", data.App.ID+"v"+data.App.Version+".apk")
-	if err != nil {
-		ctx.StopWithJSON(http.StatusInternalServerError, ErrorModel{
-			Error:      err.Error(),
-			Suggestion: "Could not return your application for some reasons",
-		})
-	}
-	ctx.StopExecution()
+	ctx.StopWithJSON(http.StatusCreated, iris.Map{"link": "generator/download/?name=" + data.App.ID + "v" + data.App.Version + ".apk"})
 
 }
 
@@ -158,4 +170,13 @@ func executeCommand(command string, directory string) error {
 
 	fmt.Print(string(cmdOutput.Bytes()))
 	return nil
+}
+
+func fileExist(name string) bool {
+	if _, err := os.Stat(name); err != nil {
+		if os.IsNotExist(err) {
+			return false
+		}
+	}
+	return true
 }

@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
             padding: EdgeInsets.zero,
             children: <Widget>[
               DrawerHeader(
-                child: Text('My App'),
+                child: Text('Victoire'),
                 decoration:
                     BoxDecoration(color: Theme.of(context).primaryColor),
               ),
@@ -101,7 +101,7 @@ class Widget1 extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              "My App".text.xl4.bold.center.make(),
+              "Victoire".text.xl4.bold.center.make(),
               "Version 1.0.0".text.make(),
             ],
           ).py8().px16(),

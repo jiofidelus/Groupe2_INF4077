@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return StartProviders(
       child: MaterialApp(
-        title: 'My App',
+        title: 'Victoire',
         theme: ThemeData(
           fontFamily: 'Avenir',
           primaryColor: HexColor.fromHex(""),

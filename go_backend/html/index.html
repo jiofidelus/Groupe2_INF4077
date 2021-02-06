@@ -790,16 +790,18 @@
           results: this.results,
           regions: this.regions
         }, {
-          responseType: 'blob', headers: {
+          //responseType: 'blob',
+          headers: {
             'Content-Type': 'application/json',
-            'Accept': 'application/vnd.android.package-archive'
+            //'Accept': 'application/vnd.android.package-archive'
           }
         }).then(response => {
 
           //this.fileName = response.headers["content-disposition"].split("filename=")[1];
           this.fileName = this.app.identifier + "v" + this.app.version + ".apk";
 
-          this.url = window.URL.createObjectURL(new Blob([response.data]));
+          //this.url = window.URL.createObjectURL(new Blob([response.data]));
+          this.url = response.data.link
           this.step++
 
           //link.setAttribute('download', fileName); //or any other extension
