@@ -1,21 +1,56 @@
 pipeline {
     agent any
+
+
+
+
     stages {
-        stage('test') {
+
+         stage('Building and teting the go backend') {
             steps {
-                echo "bonjour utfriytu ifvgyu"
+              dir("./go_backend") {
+                  sh "sudo go build main.go"
+                  echo "GOOD, ALL TEST SUCCEEDED"
+              }
+            }
+         }
+
+        stage('Cloning production code') {
+          steps {
+            sh script:'''
+                    #!/bin/bash
+                    cd /var/www/Groupe2_INF4077
+                    sudo git reset HEAD --hard
+                    sudo git pull
+                  '''
+          }
+       }
+
+       stage('Building production code') {
+         steps {
+           sh script:'''
+                   #!/bin/bash
+                   pwd
+                   cd /var/www/Groupe2_INF4077/go_backend
+                   sudo go build main.go
+                 '''
+         }
+      }
+
+
+       stage('Deploying production code') {
+         steps {
+           sh "sudo service goapp restart"
+          }
+      }
+
+        stage('Testing go app') {
+            steps {
+                sh "curl http://localhost:8100"
             }
         }
 
 
-        stage('build') {
-            steps {
-                echo "I am build"
-                sh 'whoami'
-                sh 'groups'
-                sh 'pwd'
-            }
-        }
         stage('deploy') {
             steps {
                 echo "deploy successfully"

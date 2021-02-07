@@ -1,10 +1,15 @@
+import 'package:compiled/domain/disease/disease-model.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CheckerResultScreen extends StatelessWidget {
+  final int points;
+
+  const CheckerResultScreen({Key key, this.points}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-
+    var result = Result.all.firstWhere(
+        (element) => element.start <= points && element.end > points);
     return Scaffold(
       appBar: AppBar(
         title: "Consultation Results".text.make(),
@@ -14,7 +19,13 @@ class CheckerResultScreen extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Positioned(
-              top: 101, bottom: 0, left: 0, right: 0, child: ResultContent()),
+              top: 101,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: ResultContent(
+                result: result,
+              )),
           ImageHeader(),
         ],
       ),
@@ -47,6 +58,9 @@ class ImageHeader extends StatelessWidget {
 }
 
 class ResultContent extends StatelessWidget {
+  final Result result;
+
+  const ResultContent({Key key, this.result}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -57,15 +71,11 @@ class ResultContent extends StatelessWidget {
           SizedBox(
             height: 12,
           ),
-          "This is your result Overview".text.bold.xl.make(),
+          result.overview.text.bold.xl.make(),
           SizedBox(
             height: 8,
           ),
-          "This is the description of your situation it can be as long as you wish"
-              .text
-              .sm
-              .gray700
-              .make(),
+          result.description.text.sm.gray700.make(),
           SizedBox(
             height: 16,
           ),
@@ -73,9 +83,8 @@ class ResultContent extends StatelessWidget {
           SizedBox(
             height: 8,
           ),
-          ...List.generate(
-            3,
-            (index) => ListTile(
+          ...result.advices.mapIndexed(
+            (advice, index) => ListTile(
               isThreeLine: true,
               leading: CircleAvatar(
                 child: "${index + 1}".text.make(),

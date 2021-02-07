@@ -1,6 +1,8 @@
 import 'package:compiled/application/auth/auth_cubit.dart';
 import 'package:compiled/application/exports.dart';
+import 'package:compiled/presentation/disease/disease_info_screen.dart';
 import 'package:compiled/presentation/disease/symptom_checker_screen.dart';
+import 'package:compiled/presentation/disease/symptom_screen.dart';
 import 'package:compiled/presentation/patients/patients_screen.dart';
 import 'package:compiled/presentation/statistics/chart_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,7 +22,7 @@ class HomeScreen extends StatelessWidget {
             padding: EdgeInsets.zero,
             children: <Widget>[
               DrawerHeader(
-                child: Text('Drawer Header'),
+                child: Text('Victoire'),
                 decoration:
                     BoxDecoration(color: Theme.of(context).primaryColor),
               ),
@@ -99,8 +101,8 @@ class Widget1 extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              "6780".text.xl4.bold.center.make(),
-              "Total cases".text.make(),
+              "Victoire".text.xl4.bold.center.make(),
+              "Version 1.0.0".text.make(),
             ],
           ).py8().px16(),
         ],
@@ -134,20 +136,26 @@ class Widget2Content extends StatelessWidget {
           height: 12,
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            HomeMenuButton(
+            /*   HomeMenuButton(
               name: "Map",
               icon: FontAwesomeIcons.globeAfrica,
+            ),*/
+            Expanded(
+              child: HomeMenuButton(
+                name: "Symptom",
+                icon: FontAwesomeIcons.bacteria,
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SymptomScreen()));
+                },
+              ),
             ),
-            HomeMenuButton(
-              name: "Symptom",
-              icon: FontAwesomeIcons.bacteria,
-            ),
-            HomeMenuButton(
+            /*  HomeMenuButton(
               name: "Contact",
               icon: FontAwesomeIcons.addressCard,
-            ),
+            ),*/
           ],
         ),
         Row(
@@ -167,24 +175,17 @@ class Widget2Content extends StatelessWidget {
               name: "Patients",
               icon: FontAwesomeIcons.personBooth,
               onTap: () {
-                print(BlocProvider.of<PatientsCubit>(context).state);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => MultiBlocProvider(
-                          providers: [
-                            BlocProvider<PatientsCubit>.value(
-                                value: BlocProvider.of<PatientsCubit>(context)
-                                  ..allPatient()),
-                            BlocProvider.value(
-                                value: BlocProvider.of<LocationCubit>(context)
-                                  ..locationList()),
-                          ],
-                          child: PatientsListScreen(),
-                        )));
+                    builder: (context) => PatientsListScreen()));
               },
             ),
             HomeMenuButton(
               name: "Details",
               icon: FontAwesomeIcons.info,
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => DiseaseInfo()));
+              },
             ),
           ],
         ),
@@ -197,20 +198,15 @@ class SymptomCheckerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
       child: Stack(
         children: [
-
           InkWell(
             child: Container(
               width: MediaQuery.of(context).size.width,
               child: Stack(
                 fit: StackFit.passthrough,
                 children: [
-
-                  Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
+                  Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
                     "Symptom checker".text.bold.xl2.make(),
                     "Based on common symptoms".text.sm.make(),
                   ]).py32().px8()
@@ -219,14 +215,19 @@ class SymptomCheckerCard extends StatelessWidget {
             ),
           )
               .onInkTap(() {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder:(context) =>SymptomCheckerScreen())
-                );
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => SymptomCheckerScreen()));
               })
               .material()
               .card
               .make(),
-          Positioned(bottom:-6,child: IgnorePointer(child: Image(image: AssetImage("assets/img/screening.png"), height: 100,).px8())),
+          Positioned(
+              bottom: -6,
+              child: IgnorePointer(
+                  child: Image(
+                image: AssetImage("assets/img/screening.png"),
+                height: 100,
+              ).px8())),
         ],
       ),
     );

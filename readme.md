@@ -6,15 +6,19 @@ NOM ET PRENOM |        MATRICULE
 --------------|---------------------
 NGUEJIP MUKETE YVES JORDAN       | 17Q2742
 Kitio Azanfack Sage Excelle      | 15T2364
-BIME MOUEGUE ESDRAS JOEL         | 14R2110
 NJOUONKOU NKANJONE MAXIME ANICET | 17Q2772
+
+# Generteur d'application de surveillance
+
+Le generateur d'application de surveillance est fait a partir de Golang et il est deployé sur
+https://groupe2-info4077.mooo.com/
 
 # Description de l'application
 EPI-CORON est une application de surveillance de la nouvelle maladie a CORONA VIRUS (COVID 19)
 Elle permet grace a une interface intuitive d'avoir assez d'information sur la maladie, ainsi
 il est plus facile pour un professionnel de santé d'etre assisté dans ses consultations.
 
-EPI-CORON fonctionne grace a une base de données des symptomes connues, et le diagnostique se fait 
+EPI-CORON fonctionne grace a une base de données des symptomes connues, et le diagnostique se fait
 a partir de la frequence observé dans les cas.
 
 EPI-CORON peut generer un ensemble de questionnaire qui va faciliter la consulation et generer un

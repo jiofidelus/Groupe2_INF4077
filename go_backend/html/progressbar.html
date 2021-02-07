@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="svg.css" />
+    <title>...</title>
+    <style>
+        .progress {
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 30px;
+    background: #c49b66;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    transition-duration: 5s;
+    transition-timing-function: ease;
+}
+    </style>
+  </head>
+  <body>
+    <br/><br/><br/><br/><br/><br/><br/>
+    <div class="progress" >
+      <div class="progress-bar" id="progressBar">progress</div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="svg.js"></script>
+    <script>
+        let progressBar = document.getElementById("progressBar");
+        let value = 100
+        let seconds = 120
+
+        let dataValue = progressBar.setAttribute("data-value", `${value}`)
+
+        dataAttribute = progressBar.getAttribute('data-value');
+        console.log(dataAttribute)
+
+        let bar = 0
+        progressBar.style.width = bar;
+
+        let id = setInterval(function(){
+        bar++;
+        progressBar.style.width = bar + "%"
+        if (bar >=dataAttribute){
+        clearInterval(id)
+            }
+            },10)
+
+    </script>
+  </body>
+</html>

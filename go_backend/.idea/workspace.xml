@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da2d73e4-e9d5-483a-a583-6d6889fb68d9" name="Default Changelist" comment="Updated app name, color scheme and description">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../readme.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/opt/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1o0aB6giV01Bvjo5PiXEruSpIf0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../readme.md" />
+    <property name="settings.editor.selected.configurable" value="com.intellij.profiler.configurations.ui.EditProfilerConfigurationsComponent" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/middleware" />
+      <recent name="$PROJECT_DIR$/controller" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build backend" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_backend" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="backend" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build backend" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated project and added git ignore" />
+    <MESSAGE value="Update generator.go" />
+    <MESSAGE value="Print console output before return error" />
+    <MESSAGE value="Printing error output also" />
+    <MESSAGE value="Updated jenkins" />
+    <MESSAGE value="Fixed typo in jenkins files" />
+    <MESSAGE value="added sudo to jenkins" />
+    <MESSAGE value="test" />
+    <MESSAGE value="Better jenkins script" />
+    <MESSAGE value="Fixed Better jenkins script" />
+    <MESSAGE value="Fixed Better jenkins script and added sudo" />
+    <MESSAGE value="Fixed number issues on page" />
+    <MESSAGE value="Fixed number issues on page second build" />
+    <MESSAGE value="Fixed error page with more details" />
+    <MESSAGE value="Updated app name, color scheme and description" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated app name, color scheme and description" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="595" y="124" width="400" height="677" key="#GOPATH" timestamp="1612425881024">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="595" y="124" width="400" height="677" key="#GOPATH/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612425881024" />
+    <state x="595" y="299" width="400" height="327" key="#Go_Modules" timestamp="1612426397057">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="595" y="299" width="400" height="327" key="#Go_Modules/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612426397057" />
+    <state x="608" y="181" width="374" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1612436504265">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="608" y="181" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612436504265" />
+    <state x="479" y="175" width="802" height="557" key="CommitChangelistDialog2" timestamp="1612543097675">
+      <screen x="0" y="350" width="1600" height="550" />
+    </state>
+    <state x="479" y="175" width="802" height="557" key="CommitChangelistDialog2/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543097675" />
+    <state x="583" y="221" width="424" height="491" key="FileChooserDialogImpl" timestamp="1612713308880">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="583" y="221" width="424" height="491" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1612713308880" />
+    <state width="1558" height="171" key="GridCell.Tab.0.bottom" timestamp="1612625240035">
+      <screen x="0" y="350" width="2966" height="741" />
+    </state>
+    <state width="1554" height="224" key="GridCell.Tab.0.bottom/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
+    <state width="1378" height="186" key="GridCell.Tab.0.bottom/0.27.1600.873@0.27.1600.873" timestamp="1612503538020" />
+    <state width="1558" height="171" key="GridCell.Tab.0.bottom/0.350.2966.741@0.350.2966.741" timestamp="1612625240035" />
+    <state width="1558" height="193" key="GridCell.Tab.0.bottom/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662131" />
+    <state width="1558" height="171" key="GridCell.Tab.0.center" timestamp="1612625240034">
+      <screen x="0" y="350" width="2966" height="741" />
+    </state>
+    <state width="1554" height="224" key="GridCell.Tab.0.center/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
+    <state width="1378" height="186" key="GridCell.Tab.0.center/0.27.1600.873@0.27.1600.873" timestamp="1612503538019" />
+    <state width="1558" height="171" key="GridCell.Tab.0.center/0.350.2966.741@0.350.2966.741" timestamp="1612625240034" />
+    <state width="1558" height="193" key="GridCell.Tab.0.center/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662130" />
+    <state width="1558" height="171" key="GridCell.Tab.0.left" timestamp="1612625240033">
+      <screen x="0" y="350" width="2966" height="741" />
+    </state>
+    <state width="1554" height="224" key="GridCell.Tab.0.left/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
+    <state width="1378" height="186" key="GridCell.Tab.0.left/0.27.1600.873@0.27.1600.873" timestamp="1612503538019" />
+    <state width="1558" height="171" key="GridCell.Tab.0.left/0.350.2966.741@0.350.2966.741" timestamp="1612625240033" />
+    <state width="1558" height="193" key="GridCell.Tab.0.left/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662130" />
+    <state width="1558" height="171" key="GridCell.Tab.0.right" timestamp="1612625240035">
+      <screen x="0" y="350" width="2966" height="741" />
+    </state>
+    <state width="1554" height="224" key="GridCell.Tab.0.right/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
+    <state width="1378" height="186" key="GridCell.Tab.0.right/0.27.1600.873@0.27.1600.873" timestamp="1612503538020" />
+    <state width="1558" height="171" key="GridCell.Tab.0.right/0.350.2966.741@0.350.2966.741" timestamp="1612625240035" />
+    <state width="1558" height="193" key="GridCell.Tab.0.right/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662130" />
+    <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1612431274831">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="263" height="500" key="HiddenNamespacesPopup/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612431274831" />
+    <state x="289" y="97" key="SettingsEditor" timestamp="1612426519962">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="289" y="97" key="SettingsEditor/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612426519962" />
+    <state x="213" y="27" width="501" height="708" key="Vcs.Push.Dialog.v2" timestamp="1612712888727">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="213" y="27" width="501" height="708" key="Vcs.Push.Dialog.v2/0.27.1600.873@0.27.1600.873" timestamp="1612712888727" />
+    <state x="395" y="186" width="800" height="535" key="Vcs.Push.Dialog.v2/0.350.2966.741@0.350.2966.741" timestamp="1612616906976" />
+  </component>
+</project>

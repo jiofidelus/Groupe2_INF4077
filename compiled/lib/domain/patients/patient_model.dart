@@ -59,9 +59,9 @@ class Patient extends Equatable {
       picture: map['picture'] as String,
       phone: map['phone'] as String,
       birthday: DateTime.tryParse(map['birthday']),
-      birthCity: map['birthCity'] as int,
-      createdAt: map['createdAt'] as int,
-      createdOn: DateTime.tryParse(map['createdOn']),
+      birthCity: map['city_id'] as int,
+      createdAt: map['city_id'] as int,
+      createdOn: DateTime.tryParse(map['created_at']),
     );
   }
 
