@@ -1,21 +1,42 @@
 pipeline {
     agent any
+
+
+
+
     stages {
-        stage('test') {
+
+        stage('updating') {
+          steps {
+            dir("/var/www/Group2_INF4077") {
+                sh "git reset HEAD --hard"
+                sh "git pull"
+            }
+          }
+        }
+
+
+         stage('Building go backend') {
             steps {
-                echo "bonjour essay"
+              dir("/var/www/Group2_INF4077/go_backend") {
+                  sh "go build main.go"
+              }
+            }
+         }
+
+        stage('Restarting go service') {
+          steps {
+            sh "sudo service goapp restart"
+          }
+       }
+
+        stage('Testing go app') {
+            steps {
+                sh "curl http://localhost:8100"
             }
         }
 
 
-        stage('build') {
-            steps {
-                echo "I am build"
-                sh 'whoami'
-                sh 'groups'
-                sh 'pwd'
-            }
-        }
         stage('deploy') {
             steps {
                 echo "deploy successfully"
