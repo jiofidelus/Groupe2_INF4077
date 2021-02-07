@@ -8,7 +8,7 @@ pipeline {
 
         stage('updating') {
           steps {
-            dir("/var/www/Group2_INF4077") {
+            dir("/var/www/Groupe2_INF4077") {
                 sh "git reset HEAD --hard"
                 sh "git pull"
             }
@@ -18,7 +18,7 @@ pipeline {
 
          stage('Building go backend') {
             steps {
-              dir("/var/www/Group2_INF4077/go_backend") {
+              dir("/var/www/Groupe2_INF4077/go_backend") {
                   sh "go build main.go"
               }
             }
