@@ -6,30 +6,42 @@ pipeline {
 
     stages {
 
-       /*  stage('updating') {
-          steps {
-            dir("/var/www/Groupe2_INF4077/") {
-                sh "pwd"
-                sh "sudo git reset HEAD --hard"
-                sh "sudo git pull"
-            }
-          }
-        } */
-
-
-         stage('Building go backend') {
+         stage('Building and teting the go backend') {
             steps {
               dir("./go_backend") {
                   sh "sudo go build main.go"
+                  echo "GOOD, ALL TEST SUCCEEDED"
               }
             }
          }
 
-        stage('Restarting go service') {
+        stage('Cloning production code') {
           steps {
-            sh "sudo service goapp restart"
+            sh script:'''
+                    #!/bin/bash
+                    cd /var/www/Groupe2_INF4077
+                    git reset HEAD --hard
+                    git pull
+                  '''
           }
        }
+
+       stage('Building production code') {
+         steps {
+           sh script:'''
+                   #!/bin/bash
+                   pwd
+                   cd /var/www/Groupe2_INF4077/go_backend
+                   go build main.go
+                 '''
+         }
+      }
+
+
+       stage('Deploying production code') {
+         steps {
+           sh "sudo service goapp restart"
+      }
 
         stage('Testing go app') {
             steps {
