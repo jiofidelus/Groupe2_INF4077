@@ -8,7 +8,7 @@ pipeline {
 
         stage('updating') {
           steps {
-            dir("/var/www/Groupe2_INF4077") {
+            dir("/var/www/Groupe2_INF4077/") {
                 sh "git reset HEAD --hard"
                 sh "git pull"
             }
