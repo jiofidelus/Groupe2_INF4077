@@ -19,8 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2d73e4-e9d5-483a-a583-6d6889fb68d9" name="Default Changelist" comment="Printing error output also">
-      <change beforePath="$PROJECT_DIR$/../Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Jenkinsfile" afterDir="false" />
+    <list default="true" id="da2d73e4-e9d5-483a-a583-6d6889fb68d9" name="Default Changelist" comment="Fixed Better jenkins script and added sudo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +109,14 @@
     <MESSAGE value="Update generator.go" />
     <MESSAGE value="Print console output before return error" />
     <MESSAGE value="Printing error output also" />
-    <option name="LAST_COMMIT_MESSAGE" value="Printing error output also" />
+    <MESSAGE value="Updated jenkins" />
+    <MESSAGE value="Fixed typo in jenkins files" />
+    <MESSAGE value="added sudo to jenkins" />
+    <MESSAGE value="test" />
+    <MESSAGE value="Better jenkins script" />
+    <MESSAGE value="Fixed Better jenkins script" />
+    <MESSAGE value="Fixed Better jenkins script and added sudo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Better jenkins script and added sudo" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -172,9 +178,10 @@
       <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state x="289" y="97" key="SettingsEditor/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612426519962" />
-    <state x="395" y="186" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1612616906976">
-      <screen x="0" y="350" width="2966" height="741" />
+    <state x="213" y="27" width="501" height="680" key="Vcs.Push.Dialog.v2" timestamp="1612708664339">
+      <screen x="0" y="27" width="1600" height="873" />
     </state>
+    <state x="213" y="27" width="501" height="680" key="Vcs.Push.Dialog.v2/0.27.1600.873@0.27.1600.873" timestamp="1612708664339" />
     <state x="395" y="186" width="800" height="535" key="Vcs.Push.Dialog.v2/0.350.2966.741@0.350.2966.741" timestamp="1612616906976" />
   </component>
 </project>
