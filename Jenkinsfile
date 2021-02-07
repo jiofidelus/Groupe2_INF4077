@@ -9,6 +9,7 @@ pipeline {
         stage('updating') {
           steps {
             dir("/var/www/Groupe2_INF4077/") {
+                sh "pwd"
                 sh "sudo git reset HEAD --hard"
                 sh "sudo git pull"
             }
