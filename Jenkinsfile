@@ -6,7 +6,7 @@ pipeline {
 
     stages {
 
-        stage('updating') {
+       /*  stage('updating') {
           steps {
             dir("/var/www/Groupe2_INF4077/") {
                 sh "pwd"
@@ -14,12 +14,12 @@ pipeline {
                 sh "sudo git pull"
             }
           }
-        }
+        } */
 
 
          stage('Building go backend') {
             steps {
-              dir("/var/www/Groupe2_INF4077/go_backend") {
+              dir("./go_backend") {
                   sh "sudo go build main.go"
               }
             }
