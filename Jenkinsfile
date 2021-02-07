@@ -20,8 +20,8 @@ pipeline {
             sh script:'''
                     #!/bin/bash
                     cd /var/www/Groupe2_INF4077
-                    git reset HEAD --hard
-                    git pull
+                    sudo git reset HEAD --hard
+                    sudo git pull
                   '''
           }
        }
@@ -32,7 +32,7 @@ pipeline {
                    #!/bin/bash
                    pwd
                    cd /var/www/Groupe2_INF4077/go_backend
-                   go build main.go
+                   sudo go build main.go
                  '''
          }
       }
