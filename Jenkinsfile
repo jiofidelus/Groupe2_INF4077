@@ -41,6 +41,7 @@ pipeline {
        stage('Deploying production code') {
          steps {
            sh "sudo service goapp restart"
+          }
       }
 
         stage('Testing go app') {
