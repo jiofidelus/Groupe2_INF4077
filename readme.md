@@ -13,6 +13,10 @@ NJOUONKOU NKANJONE MAXIME ANICET | 17Q2772
 Le generateur d'application de surveillance est fait a partir de Golang et il est deployé sur
 https://groupe2-info4077.mooo.com/
 
+## Architecture utilisé
+![Generator Architecture](/architecture/generator_architecture.png?raw=true "Using go and Flutter")
+
+
 # Description de l'application
 EPI-CORON est une application de surveillance de la nouvelle maladie a CORONA VIRUS (COVID 19)
 Elle permet grace a une interface intuitive d'avoir assez d'information sur la maladie, ainsi

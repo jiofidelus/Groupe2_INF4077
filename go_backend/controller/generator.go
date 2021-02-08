@@ -96,6 +96,8 @@ func generateApp(ctx iris.Context) {
 		return
 	}
 
+	log.Println(data)
+
 	//Verifying id does not exist
 	var existInstance Application
 	exist := configs.DB.Where(&Application{ID: data.App.ID}).First(&existInstance)
