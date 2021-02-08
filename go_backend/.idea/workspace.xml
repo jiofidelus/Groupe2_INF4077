@@ -19,10 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2d73e4-e9d5-483a-a583-6d6889fb68d9" name="Default Changelist" comment="Updated app name, color scheme and description">
+    <list default="true" id="da2d73e4-e9d5-483a-a583-6d6889fb68d9" name="Default Changelist" comment="updated readme and description default">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/generator.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/generator.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../readme.md" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.intellij.profiler.configurations.ui.EditProfilerConfigurationsComponent" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -122,7 +123,8 @@
     <MESSAGE value="Fixed number issues on page second build" />
     <MESSAGE value="Fixed error page with more details" />
     <MESSAGE value="Updated app name, color scheme and description" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated app name, color scheme and description" />
+    <MESSAGE value="updated readme and description default" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated readme and description default" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -144,36 +146,36 @@
       <screen x="0" y="350" width="1600" height="550" />
     </state>
     <state x="479" y="175" width="802" height="557" key="CommitChangelistDialog2/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543097675" />
-    <state x="583" y="221" width="424" height="491" key="FileChooserDialogImpl" timestamp="1612713308880">
+    <state x="583" y="221" width="424" height="491" key="FileChooserDialogImpl" timestamp="1612733166724">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
-    <state x="583" y="221" width="424" height="491" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1612713308880" />
-    <state width="1558" height="171" key="GridCell.Tab.0.bottom" timestamp="1612625240035">
-      <screen x="0" y="350" width="2966" height="741" />
+    <state x="583" y="221" width="424" height="491" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1612733166724" />
+    <state width="1558" height="286" key="GridCell.Tab.0.bottom" timestamp="1612774024172">
+      <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state width="1554" height="224" key="GridCell.Tab.0.bottom/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
-    <state width="1378" height="186" key="GridCell.Tab.0.bottom/0.27.1600.873@0.27.1600.873" timestamp="1612503538020" />
+    <state width="1558" height="286" key="GridCell.Tab.0.bottom/0.27.1600.873@0.27.1600.873" timestamp="1612774024172" />
     <state width="1558" height="171" key="GridCell.Tab.0.bottom/0.350.2966.741@0.350.2966.741" timestamp="1612625240035" />
     <state width="1558" height="193" key="GridCell.Tab.0.bottom/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662131" />
-    <state width="1558" height="171" key="GridCell.Tab.0.center" timestamp="1612625240034">
-      <screen x="0" y="350" width="2966" height="741" />
+    <state width="1558" height="286" key="GridCell.Tab.0.center" timestamp="1612774024172">
+      <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state width="1554" height="224" key="GridCell.Tab.0.center/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
-    <state width="1378" height="186" key="GridCell.Tab.0.center/0.27.1600.873@0.27.1600.873" timestamp="1612503538019" />
+    <state width="1558" height="286" key="GridCell.Tab.0.center/0.27.1600.873@0.27.1600.873" timestamp="1612774024172" />
     <state width="1558" height="171" key="GridCell.Tab.0.center/0.350.2966.741@0.350.2966.741" timestamp="1612625240034" />
     <state width="1558" height="193" key="GridCell.Tab.0.center/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662130" />
-    <state width="1558" height="171" key="GridCell.Tab.0.left" timestamp="1612625240033">
-      <screen x="0" y="350" width="2966" height="741" />
+    <state width="1558" height="286" key="GridCell.Tab.0.left" timestamp="1612774024171">
+      <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state width="1554" height="224" key="GridCell.Tab.0.left/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
-    <state width="1378" height="186" key="GridCell.Tab.0.left/0.27.1600.873@0.27.1600.873" timestamp="1612503538019" />
+    <state width="1558" height="286" key="GridCell.Tab.0.left/0.27.1600.873@0.27.1600.873" timestamp="1612774024171" />
     <state width="1558" height="171" key="GridCell.Tab.0.left/0.350.2966.741@0.350.2966.741" timestamp="1612625240033" />
     <state width="1558" height="193" key="GridCell.Tab.0.left/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662130" />
-    <state width="1558" height="171" key="GridCell.Tab.0.right" timestamp="1612625240035">
-      <screen x="0" y="350" width="2966" height="741" />
+    <state width="1558" height="286" key="GridCell.Tab.0.right" timestamp="1612774024172">
+      <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state width="1554" height="224" key="GridCell.Tab.0.right/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612459250323" />
-    <state width="1378" height="186" key="GridCell.Tab.0.right/0.27.1600.873@0.27.1600.873" timestamp="1612503538020" />
+    <state width="1558" height="286" key="GridCell.Tab.0.right/0.27.1600.873@0.27.1600.873" timestamp="1612774024172" />
     <state width="1558" height="171" key="GridCell.Tab.0.right/0.350.2966.741@0.350.2966.741" timestamp="1612625240035" />
     <state width="1558" height="193" key="GridCell.Tab.0.right/1600.323.1366.768/0.350.1600.550@0.350.1600.550" timestamp="1612543662130" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1612431274831">
@@ -184,10 +186,10 @@
       <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state x="289" y="97" key="SettingsEditor/0.27.1600.873/1600.0.1600.900@0.27.1600.873" timestamp="1612426519962" />
-    <state x="213" y="27" width="501" height="708" key="Vcs.Push.Dialog.v2" timestamp="1612712888727">
+    <state x="213" y="27" width="501" height="715" key="Vcs.Push.Dialog.v2" timestamp="1612714414278">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
-    <state x="213" y="27" width="501" height="708" key="Vcs.Push.Dialog.v2/0.27.1600.873@0.27.1600.873" timestamp="1612712888727" />
+    <state x="213" y="27" width="501" height="715" key="Vcs.Push.Dialog.v2/0.27.1600.873@0.27.1600.873" timestamp="1612714414278" />
     <state x="395" y="186" width="800" height="535" key="Vcs.Push.Dialog.v2/0.350.2966.741@0.350.2966.741" timestamp="1612616906976" />
   </component>
 </project>
